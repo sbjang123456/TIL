@@ -1,5 +1,8 @@
 node_modules/
 
+# parcel 2.x
+.parcel-cache/
+
 .cache/
 dist/
 build/
