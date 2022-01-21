@@ -75,12 +75,18 @@ X축, Y축 지정 가능
 ```css
 transform: translate(10px, 20px); transform: translate;
 ```
-...
 
 ## transition
-마우스를 클릭하거나 hover 상태에 변ㄴ화를 주는 것
+마우스를 클릭하거나 hover 상태에 변화를 주는 것
 
 * `transition-property` : 색상이나 위치 등 변화의 대상 되는 css 속성 지정
 * `transition-duration` : 변화할 때 거리는 시간 (초단위)
+* `transition-timing-function` : 진행시간(속성값은 animation 속도 형태 속성과 통일)
 * `transition-delay` : 변화되기 전 시간을 초단위로 지정
-* `transition-timing-function : 진행시간(속성값은 animation 속도 형태 속성과 통일)
+
+```css
+/* 단축 CSS 문법 */
+div {
+    transition: <property> <duration> <timing-function> <delay>;
+}
+``` 
