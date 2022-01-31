@@ -1,6 +1,7 @@
 # data types
 
 ## Variable
+메모리에 값을 읽고 쓰는게 가능
 변수란 - 변경될 수 있음을 뜻함.
 > 변수 타입을 통해 변수를 정의하게 되면 메모리 포인터가 생성되는 개념이다.
 
@@ -28,31 +29,31 @@ var 타입은 변수를 선언하기도 전에 사용할 수 있음. (var hoisti
 * no block scope
     > block 을 이용해서 변수를 선언해도 어디에서든 사용할 수 있게 됨.   
 
-## Constants(상수)
+## Constant(상수)
 변수를 할당하면 절대 값이 바뀌지 않는다.
 > 가리키고 있는 포인터가 잠겨있다.   
 > 값을 선언함과 동시에 할당해야만 하고 그 뒤로는 값을 변경할 수 없다.   > 
 
-값이 계속 변경될 수 있는 것을 _mutable_ 데이터 타입(let, var)이라고 하며,
-constansts 는 _immutable_ 데이터타입(const)이라고 한다.   
+값이 계속 변경될 수 있는 것을 _mutable_(object, array) 데이터 타입이라고 하며,
+constanst 는 _immutable_ 데이터타입이라고 한다.   
 가능하면 값을 할당한 다음에 값을 변경할 수 없는 immutable 데이터 타입을 사용할 것을 지향해야한다.
 * 장점
     - 보안상의 이유
         > 해커들이 코드에 이상한것을 삽입해서 값을 계속 변경해나가는 것이 가능한데, 이것을 방지 할 수 있음.
     - 스레드 안전성
-        > 어플리케이션이 실행되면 한가지의 프로세스가 할당되고, 그 프로세스 안에서는 다양한 스레드가 동시에 돌면서 어플리케이션을 효율적으로 빠르게 돌아갈 수 있도록 도와주는데, 다양한 스레드들이 동시에 변수에 접근해서 값을 변경할 수 있다. 이는 위험한것으로 가능하면 값이 변경되지 않는 것을 사용하는 것이 좋다.
+        > 어플리케이션이 실행되면 한가지의 프로세스가 할당되고, 그 프로세스 안에서는 다양한 스레드가 동시에 돌면서 어플리케이션을 효율적으로 빠르게 돌아갈 수 있도록 도와준다. 이 때, 다양한 스레드들이 동시에 같은 변수에 접근해서 값을 변경할 수 있는데, 이는 위험하며 가능하면 값이 변경되지 않는 _immutable_ 을 사용하는 것이 좋다.
     - 사용자 실수 방지
 
 ## Variable types
 javascript 데이터 타입의 종류 
-* primitive (single item)
+* primitive (single item) - value 가 메모리에 저장됨.
     - number
     - string
     - boolean
     - null
     - undefined
     - symbol
-* object (multiple single item)
+* object (multiple single item) - ref 가 메모리에 저장됨.
 * function (first-class function)
 
 ### number
