@@ -7,3 +7,6 @@ node_modules/
 .parcel-cache/
 dist/
 build/
+
+# TIL project
+**/react-rollup-base2/lib/
