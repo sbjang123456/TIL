@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@controller/*": ["src/components/controller/*"],
+      "@model/*": ["src/components/model/*"],
+      "@viewModel/*": ["src/components/viewModel/*"],
+      "@view/*": ["src/components/view/*"],
+      "@provider/*": ["src/components/provider/*"],
+    }
+  },
+}
