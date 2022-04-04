@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Ract MVVM 예제 - 02
+리액트에서 mvvm 을 적용해보는 간단한 예제 따라해보며 학습하기!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 기술스택
+* Node 17 (npm 8)
+* yarn berry (yarn v3)
+* React 18
+* craco
 
-## Available Scripts
+## 구조설명
+MVVM 의 개념을 구글링을 통해서도 많이 나오니, 간한하게만 설명하자면..
 
-In the project directory, you can run:
+### View
+View 컴포넌트를 사용하는 곳에서 ViewModel 을 넘겨받아 UI 와 관련된 것만을 포함한다.
 
-### `yarn start`
+### ViewModel
+Model 을 주입받아서 데이터 가공을 담당한다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Model
+데이터의 상태만을 다룬다.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## 느낀점
+앞 선 예제와 현재 예제를 따라해보면서 리액트에서 MVVM 은 권장하지 않는다고 한다는 것을 조금 이해했다.   
+아무래도 리액트는 상태관리 객체를 옵저빙하여 변경점을 특정해야하는데, mvvm 은 객체의 속성을 변경해야하기 때문에 변경 후 컴포넌트에 반영하기 위해서는 강제렌더링을 위한 상태값을 필요로 하는 것 같다.   
+또한 Recoil 이나 Redux 와 같은 라이브러리가 존재하기 때문에 굳이 패턴을 사용해서 관심사를 분리하지 않아도 될 것 같다. (물론 큰 프로젝트는 필요할지도...?)   
+해당 예제에서는 굳이 사용을 원한다면 react-mvvm 사용을 권장하고 있다. (나중에 학습해보는 걸로!)   
+그래도 로직 분리가 잘 된다면, 새로운 개발자가 투입되더라도 기능개선이나 유지보수를 보다 쉽게 접근할 수 있을 것으로는 보고있다!   
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 참고문헌
+* 예제소스 참고 - https://m.blog.naver.com/pjt3591oo/222034351034
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
