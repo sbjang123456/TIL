@@ -1,0 +1,9 @@
+{
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "@craco/craco": "^6.4.3"
+  },
+  "devDependencies": {
+    "craco-alias": "^3.0.1"
+  }
+}
