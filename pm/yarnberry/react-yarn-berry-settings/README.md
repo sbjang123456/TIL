@@ -8,3 +8,6 @@ create-react-app 이나 create-next-app 의 패키지매니저를 yarn berry 로
 * `-n|--name` : 해당 옵션은 프로젝트명을 뒤에 넘겨받는다. (프로젝트명에 해당하는 디렉토리가 생성된다.)
 * `-l|--lib` : 해당 옵션은 react 와 next 를 선택하는 옵션이다. (react|next 가 아닐 경우 실행되지 않는다.)
 * `-t|--typescript` : 해당 옵션은 커맨드를 입력받지 않고 옵션만 있으면 typescript 템플릿으로 보일러플레이트가 생성된다.
+
+## 참고자료
+https://github.com/yeo311/create-react-app-with-yarn-berry
