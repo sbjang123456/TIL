@@ -65,49 +65,53 @@ if [ $lib == react ]
 then
   if [ $ts ]
   then
-    echo 'ts'
+    yarn create react-app $project_name --template typescript
   else
-    echo 'else'
+    yarn create react-app $project_name
   fi
 elif [ $lib == next ]
 then
-  echo 'test'
+  if [ $ts ]
+  then
+    yarn create next-app $project_name --typescript
+  else
+    yarn create next-app $project_name
+  fi
 fi
 
-echo 'success'
+echo "Delete node_modules and lock file..."
+cd $project_name
+rm -rf node_modules
+rm -rf yarn.lock
+rm -rf package-lock.json
+
+echo "Set yarn berry..."
+yarn set version berry
+
+echo "Install packages..."
+yarn
+
+if [ $ts ]
+then
+  echo "Import typescript plugin..."
+  yarn plugin import typescript
+fi
 
 
-#yarn create react-app $dir_name --template typescript
-#
-#echo "Delete node_modules and lock file..."
-#cd $dir_name
-#rm -rf node_modules
-#rm -rf yarn.lock
-#rm -rf package-lock.json
-#
-#echo "Set yarn berry..."
-#yarn set version berry
-#
-#echo "Install packages..."
-#yarn
-#
-#echo "Import typescript plugin..."
-#yarn plugin import typescript
-#
-#echo "Set vscode sdk..."
-#yarn dlx @yarnpkg/sdks vscode
-#
-#echo "Reinstall jest-dom..."
-#yarn remove @testing-library/jest-dom
-#yarn add -D @testing-library/jest-dom
-#
-#read -p "Do you want to use zero-install? (y/n) " -n 1 -r
-#echo
-#if [[ $REPLY =~ ^[Yy]$ ]]
-#then
-#  echo -e ".yarn/*\n!.yarn/cache\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
-#else
-#  echo -e ".pnp.*\n.yarn/*\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
-#fi
+echo "Set vscode sdk..."
+yarn dlx @yarnpkg/sdks vscode
+
+echo "Reinstall jest-dom..."
+yarn remove @testing-library/jest-dom
+yarn add -D @testing-library/jest-dom
+
+read -p "Do you want to use zero-install? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  echo -e ".yarn/*\n!.yarn/cache\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
+else
+  echo -e ".pnp.*\n.yarn/*\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
+fi
 
 echo "Done."
