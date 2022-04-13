@@ -79,39 +79,51 @@ then
   fi
 fi
 
-echo "Delete node_modules and lock file..."
+echo "=======================Delete node_modules and lock file...======================="
 cd $project_name
 rm -rf node_modules
 rm -rf yarn.lock
 rm -rf package-lock.json
+echo "=======================Complete Delete node_modules and lock file!!!======================="
 
-echo "Set yarn berry..."
+
+echo "=======================Set yarn berry...======================="
 yarn set version berry
+echo "=======================Complete Set yarn berry!!!======================="
 
-echo "Install packages..."
+
+echo "=======================Install packages...======================="
 yarn
+echo "=======================Complete Install packages!!!======================="
 
 if [ $ts ]
 then
-  echo "Import typescript plugin..."
+  echo "=======================Import typescript plugin...======================="
   yarn plugin import typescript
+  echo "=======================Complete Import typescript plugin!!!======================="
 fi
 
 
-echo "Set vscode sdk..."
+echo "=======================Set vscode sdk...======================="
 yarn dlx @yarnpkg/sdks vscode
+echo "=======================Complete Set vscode sdk!!!======================="
 
-echo "Reinstall jest-dom..."
+
+echo "=======================Reinstall jest-dom...======================="
 yarn remove @testing-library/jest-dom
 yarn add -D @testing-library/jest-dom
+echo "=======================Complete Reinstall jest-dom!!!======================="
+
 
 read -p "Do you want to use zero-install? (y/n) " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  echo -e ".yarn/*\n!.yarn/cache\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
+  echo "=======================Apply Zero Install...======================="
+  echo "\n.yarn/*\n!.yarn/cache\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
 else
-  echo -e ".pnp.*\n.yarn/*\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
+  echo "=======================Unapply Zero Install...======================="
+  echo "\n.pnp.*\n.yarn/*\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
 fi
 
-echo "Done."
+echo "Done.😀"
