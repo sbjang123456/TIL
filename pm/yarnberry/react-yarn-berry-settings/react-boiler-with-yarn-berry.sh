@@ -120,10 +120,10 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   echo "=======================Apply Zero Install...======================="
-  echo -e "\n.yarn/*\n!.yarn/cache\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
+  echo "\n.yarn/*\n!.yarn/cache\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
 else
   echo "=======================Unapply Zero Install...======================="
-  echo -e "\n.pnp.*\n.yarn/*\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
+  echo "\n.pnp.*\n.yarn/*\n!.yarn/patches\n!.yarn/plugins\n!.yarn/releases\n!.yarn/sdks\n!.yarn/versions" >> .gitignore
 fi
 
 echo "Done.😀"
