@@ -7,13 +7,22 @@ Microsoft 의 **Visual Studio Code** 는 MIT 라이센스로 오픈소스 이다
 
 기본적으로 처음 시작할 때 설치 플러그인들이다.
 
-- ESLint
-- Prettier - Code formatter
-- Git Graph
-- Git History
-- GitLens
-- Tabnine
-- Doxygen Documentation Generator
+* ESLint
+* Prettier - Code formatter
+* Git Graph
+* Git History
+* GitLens
+* Tabnine
+* Doxygen Documentation Generator
+* Material Theme
+* Material Icon Theme
+* Indent Rainbow
+* auto rename tag
+* css peek
+* HTML CSS Support
+* Live Server
+* Reactjs code snippets
+* Auto Import
 
 ### ESLint
 
@@ -71,6 +80,33 @@ Webstorm 의 git log 나 sourceTree 처럼 git 을 막대 형태로 볼 수 있�
 주석 자동 생성기로 함수명 위에서 `/**` 엔터 치면 자동으로 생성 해준다.   
 아직 사용은 안해봤지만, webstorm 에서처럼 vscode 가 주석이 이쁘게 생기는게 아니라면 상당히 도움이 되는 플러그인이 될 것 같다!!
 
+### Material Theme
+VSCode 의 여러 테마를 선택할 수 있음
+
+### Material Icon Theme 
+탐색기의 파일 아이콘이 변경됨(그냥 이쁨)
+
+### Indent Rainbow
+들여쓰기(탭) 된 부분이 하이라이트됨
+
+### Auto Rename Tag
+html 태그에서 앞에 태그를 바꾸면 뒤에 태그도 자동으로 변경된다.(웹스톰은 원래 됨..)
+
+### CSS Peek
+html 태그 에서 css class 명을 찾아가주는 플러그인 (웹스톰은 원래 됨..)
+
+### HTML CSS Support
+css class 명 코드 어시스트 기능 제공
+
+### Live Server
+hot reload 지원(저장하면 자동반영)
+
+### Reactjs code snippets
+여러 키워드를 통해 리액트 컴포넌트 초기틀 기타 등등 작성 가능 (플러그인 내 트리거 참조)
+
+### Auto Import
+자동 임포트(딱봐도 편함)
+
 ## 기타 설정
 
 ### oh-my-zsh를 사용할 때 터미널 글꼴이 깨진다면
@@ -83,3 +119,28 @@ Webstorm 의 자동저장이 너무나 적응되어버렸다면 vscode 도 자�
 1. 설정 (**command + ,**) 
 2. 검색어 **auto save**
 3. Files: Auto Save 선택상자에서 **onFocusChange** or **onWindowChange** 선택
+
+### settings.json
+* comment(주석) 색상 변경
+    ```json
+    "editor.tokenColorCustomizations": {
+        "comments": "#ffc2c2"
+    },
+    ```
+
+* block 단위 괄호에 색깔을 줌
+    ```json
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active"
+    ```
+
+* postcss 에서 Emmet 사용을 위한 설정
+    ```json
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "postcss": "css"
+    },
+    "emmet.syntaxProfiles": {
+        "postcss": "css"
+    },
+    ```
