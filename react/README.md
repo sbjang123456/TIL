@@ -44,3 +44,10 @@ yarn create react-app project_name
 # npm
 npm ini react-app project_name
 ```
+
+## React Component 종류
+* React.Component (class)
+* React.PureComponent
+* function
+* memo (function)
+* React Hook
