@@ -47,7 +47,13 @@ npm ini react-app project_name
 
 ## React Component 종류
 * React.Component (class)
+    - 라이프사이클
+        + `componentDidMount` : 컴포넌트가 UI 상에 등록되어 사용자에게 보여질 때 호출
+        + `componentWillUnmount` : 컴포넌트가 UI 상에 제거되어 사용자에게 안보일 때 호출
 * React.PureComponent
+    - 값이 변경되지 않았을 때 불필요한 렌더링을 없애줌.
 * function
 * memo (function)
+    - PureComponent 와 비슷!
 * React Hook
+    - function 방식에서 라이프사이클 및 상태값을 가질 수 있도록 도와줌.
