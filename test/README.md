@@ -43,3 +43,16 @@ QA 단계에서 테스트 시 많이 비용이 발생할 수 있으므로(없을
 * 지속적인 통합이 테스트 코드를 통해 문제없이 이루어진다면 지속적인 배포도 매끄럽게 이루어질 수 있다.
 
 
+## Unit Test
+* Test Runner : 테스트 실행 결과 생성
+* Assertion : 테스트 조건 비교 로직
+
+### Jest
+*javascript test framework*
+
+* zero configuration
+* snapshot
+* isolated
+* great api
+* great exception
+* code coverage
