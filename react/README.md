@@ -57,3 +57,10 @@ npm ini react-app project_name
     - PureComponent 와 비슷!
 * React Hook
     - function 방식에서 라이프사이클 및 상태값을 가질 수 있도록 도와줌.
+
+ 
+## React Router
+React 는 SPA 이며, SPA 는 하나의 URL 에서 페이지 새로고침이 없이 동작하는 어플리케이션을 말한다.   
+But, URL 이 나눠져 있지 않기 때문에 북마크나 브라우저 뒤로가기 앞으로가기 등의 기능을 사용할 수 없다.   
+싱글페이지 어플리케이션을 유지하면서 url 에 해당하는 페이지로 이동할 수 있도록 해주는 것이다.
+> **Routing** :  어떤 페이지를 보여줄 것인지 결정하고 도와주는 것
