@@ -56,3 +56,39 @@ QA 단계에서 테스트 시 많이 비용이 발생할 수 있으므로(없을
 * great api
 * great exception
 * code coverage
+
+## 테스트 코드 필수 사항
+* 한번 작성된 테스트 코드는 영원히 유지보수 해야 함.
+* 내부 구현 사항은 테스트 하면 안됨.
+* 재사용성 높여야 함 (테스트 유틸리티)
+* 배포용 코드와 철저히 분리
+* 테스트코드를 통한 문서화
+
+## 테스트의 구조
+1. 준비 (Arrange | ***Given***)
+2. 실행 (Act | ***When***)
+3. 검증 (Assert | ***Then***)
+
+## 테스트 원칙 ***FIRST***
+* Fast : 느린것에 대한 의존성 낮춤. (테스트 코드는 빨라야함!)
+* Isolated : 최소한의 유닛으로 검증 (독립, 집중적으로 유지)
+* Repeatable : 실행할 때마다 동일한 결과를 유지 (환경에 영향을 받지 않도록 작성!)
+* Self-Validating : 스스로 결과 검증 (자동화를 통한 검증단계 - *CI/CD* )
+* Timely : 시기적절하게 테스트 코드 작성 (사용자에게 배포되기 전에 테스트 코드 작성)
+
+## 테스트 범위 ***Right-BICEP***
+* Right : 모든 요구사항이 정상 동작하는지 확인
+* Boundary conditions : 모든 코너 케이스에 대해 테스트
+* Inverse relationship : 역관계를 적용해서 결과값을 확인 (일관성 유지)
+* Cross-check : 다른 수단을 이용해서 결과값이 맞는지 확인
+* Error conditions : 우리가 예상할 수 있는 모든 에러케이스에 대해 테스트 작성
+* Performance characteristics : 성능 확인은 테스트를 통해 정확한 수치로 확인 (성능 개선의 척도와 확인도 데이터를 통해 확인)
+
+## 테스트 조건 ***CORRECT***
+* Conformance : 특정 포맷 준수 (전화번호, 이메일, 아이디, 파일 확장자 등)
+* Ordering : 순서 조건 확인
+* Range : 숫자 범위 확인
+* Reference : 외부 의존성 유무, 특정 조건 유무
+* Existence : 값 존재 유무에 따른 동작 확인
+* Cardinality : 0-1-N 법칙에 따라 검증
+* Time : 상대, 절대, 동시에 발생할 경우 확인
