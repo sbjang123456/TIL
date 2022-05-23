@@ -1,0 +1,47 @@
+[alias]
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	hist = log --graph --all --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(white)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --date=short
+
+	b = branch
+	bd = branch -d
+	cb = "! f() { git checkout -b $1; }; f"
+	cp = cherry-pick
+	df = "!# Select diff file; \n\
+		git diff $(git status-select) "
+	s = status
+	pl = pull
+	rs = restore
+	rb = rebase
+	rbc = rebase --continue
+	rba = rebase --abort
+	comm = commit
+	comma = commit --amend
+	p0 = "!git push origin $(git branch --show-current)"
+
+	branch-select = "!# Select branch; \n\
+		git branch | fzf"
+	status-select = "!# Select files;\n\
+		git s -s | fzf -m | awk '{print $2}' "
+	a = "!# Add selected filed; \n\
+		git add $(git status-select)"
+	ch = "!# Checkout selected branch; \n\
+		git checkout $(git branch-select)"
+
+[user]
+	email = sbjang123456@gmail.com
+	name = JangSuBin
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[commit]
+	template = /Users/sb/.gitmessage
+[core]
+	editor = code --wait
+
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
