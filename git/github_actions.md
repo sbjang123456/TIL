@@ -12,6 +12,53 @@ CI/CD 를 지원하는 깃허브 내의 기능으로, 별도의 외부툴(jenkin
 * Runners : job을 실행하는 VM or Docker Container 개념 (독립적인 환경에서 실행됨)
 
 ## 사용법
-깃허브 폴더(저장소) 내의 yml 파일 생성   
-`.github/workflows/workflow.yml`
+깃허브 폴더(저장소) 내의 yml 파일 생성 or 저장소 내 actions 탭에서 선택   
+`.github/workflows/[파일명].yml`
+```yml
+# actions 의 workflow 이름
+name: ci
+
+# 이벤트 (main 브랜치에 push 하거나 pr이 생성되었을 때)
+on:
+  push:
+    branches:
+      - main
+    
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  test:
+    # ubuntu 최신버전 환경으로 vm 실행
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      
+      # deps install (의존성 설치)
+      - name: Install dependencies
+        run: |
+          yarn install
+      
+      # tsc (타입 체크)
+      - name: Typecheck
+        run: |
+          yarn run typecheck
+
+      # eslint (lint 체크)
+      - name: EsLinter
+        run: |
+          yarn run lint
+
+      # Test (unit test 수행 ex: jest)
+      - name: Unit tests
+        run: |
+          yarn run test
+```
+
+## 확인
+저장소 내 actions 탭에서 해당 워크플로우가 실행되며, pr 시에도 표시됨!   
 
