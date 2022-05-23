@@ -27,9 +27,12 @@
 	ch = "!# Checkout selected branch; \n\
 		git checkout $(git branch-select)"
 
-[user]
-	email = sbjang123456@gmail.com
-	name = JangSuBin
+[includeIf "gitdir:~/dev/workspace/study/"]
+	path = .gitconfig-personal
+
+[includeIf "gitdir:~/dev/workspace/company/"]
+	path = .gitconfig-company
+
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
