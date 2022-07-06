@@ -27,9 +27,13 @@
 	ch = "!# Checkout selected branch; \n\
 		git checkout $(git branch-select)"
 
-[user]
-	email = sbjang123456@gmail.com
-	name = JangSuBin
+[includeIf "gitdir:~/dev/workspace/study/"]
+	path = .gitconfig-personal
+
+# 경로에 * 로 특정 패턴으로 추가 가능
+[includeIf "gitdir:~/dev/workspace/company/"]
+	path = .gitconfig-company
+
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
