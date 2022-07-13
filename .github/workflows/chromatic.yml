@@ -9,10 +9,13 @@ jobs:
   test:
     # Operating System
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./react/storybook/taskbox
+
     # Job steps
     steps:
       - uses: actions/checkout@v1
-      - run: cd react/storybook/taskbox && yarn
+      - run: yarn
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
