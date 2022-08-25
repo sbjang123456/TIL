@@ -2,6 +2,7 @@
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 	hist = log --graph --all --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(white)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --date=short
 
+  fp = fetch --prune
 	b = branch
 	bd = branch -d
 	cb = "! f() { git checkout -b $1; }; f"
@@ -20,12 +21,20 @@
 
 	branch-select = "!# Select branch; \n\
 		git branch | fzf"
+	remote-branch-select = "!# Select branch; \n\
+		git branch -r | fzf"
 	status-select = "!# Select files;\n\
 		git s -s | fzf -m | awk '{print $2}' "
 	a = "!# Add selected filed; \n\
 		git add $(git status-select)"
 	ch = "!# Checkout selected branch; \n\
 		git checkout $(git branch-select)"
+	chr = "!# Checkout selected remote branch; \n\
+		git checkout -t $(git remote-branch-select)"
+	bds = "!# Checkout selected branch; \n\
+		git bd $(git branch-select)"
+	bdsr = "!# Checkout selected remote branch; \n\
+		git push origin --delete $(git remote-branch-select)"
 
 [includeIf "gitdir:~/dev/workspace/study/"]
 	path = .gitconfig-personal
