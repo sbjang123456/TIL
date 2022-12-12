@@ -3,6 +3,34 @@
 Microsoft 의 **Visual Studio Code** 는 MIT 라이센스로 오픈소스 이다.  
 보통 jetbrains 사의 webstorm 을 쓰던사람들은 비용이 들지 않는 이유로 많이 넘어왔던 것 같다.
 
+---
+## VSCode 단축키
+* 개발툴 단축키 
+  - **Command Palette** (<kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>) : Visual Studio Code에 실행가능한 모든 명령어를 마우스없이 키보드로 실행할 수 있는 명령어(검색으로 인해 명령이 실행 및 단축키를 확인할 수 있다.)
+  - **Quick Open** (<kbd>Command</kbd> + <kbd>P</kbd>) : 파일을 빠르게 검색하고 이동해서 오픈할 수 있는 기능.
+  - **User Settings** (<kbd>Command</kbd> + <kbd>,</kbd>) : 개발환경의 설정창. settings.json 을 오픈할 수 있음.
+  - **Toggle Sidebar** (<kbd>Command</kbd> + <kbd>B</kbd>) : 좌측 익스플로러 창을 열고 닫을 수 있는 단축키
+  - **Toggle Terminal** (<kbd>Control</kbd> + <kbd>`</kbd>) : 하단 터미널 창을 열고 닫을 수 있는 단축키
+  - **Keyboard Shortcuts** (<kbd>Command</kbd> + <kbd>K</kbd> + <kbd>S</kbd>) : VSCode의 단축키를 확인할 수 있는 창을 오픈
+    + [맥용 단축키 모음](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+    + [윈도우용 단축키 모음](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+* 편집 단축키(코딩용)
+  - **파일 시작/끝으로 이동** (<kbd>Command</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd>) : 파일의 가장 위와 아래로 이동
+  - **라인 시작/끝으로 이동** (<kbd>Command</kbd> + <kbd>←</kbd> / <kbd>→</kbd>) : 라인의 시작 및 끝으로 이동
+  - **단어 이동(Move Word)** (<kbd>Option</kbd> + <kbd>←</kbd> / <kbd>→</kbd>) : 단어별로 이동
+  - **단어 선택(Select Word)** (<kbd>Option</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd> / <kbd>→</kbd>) : 단어별로 선택
+  - **라인 복사(Copy Line)** (<kbd>Command</kbd> + <kbd>C</kbd>) : 원하는 라인에서 해당 단축키를 통해 라인 복사
+  - **라인 잘라내기(Cut Line)** (<kbd>Command</kbd> + <kbd>X</kbd>) : 원하는 라인에서 해당 단축키를 통해 라인 잘라내기
+  - **라인 위/아래로 이동** (<kbd>Option</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd>) : 원하는 라인에서 해당 단축키를 통해 라인 원하는 위치로 이동 (*선택한 블럭 또한 해당 단축키를 통해 사용 가능*)
+  - **라인 위/아래로 복사** (<kbd>Option</kbd> + <kbd>Shift</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd>) : 원하는 라인에서 해당 단축키를 통해 해당 라인을 복사 후 위 또는 아래로 붙여넣기 할 수 있다.(*선택한 블럭 또한 해당 단축키를 통해 사용 가능*)
+  - **아래로 라인 삽입(Insert line below)** (<kbd>Command</kbd> + <kbd>Enter</kbd>) : 라인에서 아무 위치에서나 해당 단축키를 통해 아래에 라인을 새로 추가할 수 있음!
+  - **다중 선택(Multi Selection)** (<kbd>Command</kbd> + <kbd>D</kbd>) : 한 파일안에서 여러 번 반복되어져서 사용되는 단어가 있다면 해당하는 단어 위에서 해당 단축키를 사용하면 자동으로 모든 반복된 단어들이 자동으로 선택되어져 있기 때문에 동시에 수정할 수 있다.
+  - **마지막 커서 실행취소(Undo last Cursor)** (<kbd>Command</kbd> + <kbd>U</kbd>) : 이 전에 있었던 커서로 이동함
+  - **커서 삽입(insert cursor)** (<kbd>Option</kbd> + <kbd>mouse click</kbd>) : 다중 커서 삽입으로 일괄 편집을 하기 위한 기능
+  - **다중 커서 삽입(Column selection)** (<kbd>Shift</kbd> + <kbd>Option</kbd> + <kbd>drag mouse</kbd>)
+  - **선택 박스 커서 삽입(Current selection)** (<kbd>Shift</kbd> + <kbd>Option</kbd> + <kbd>I</kbd>) : 선택한 블록의 각 라인 끝 부분에 커서가 삽입됨.
+
+---
 ## Extension(플러그인)
 
 기본적으로 처음 시작할 때 설치 플러그인들이다.
@@ -76,6 +104,9 @@ Webstorm 의 git log 나 sourceTree 처럼 git 을 막대 형태로 볼 수 있�
 이건 웹스톰 때부터 쓰던건데, 내가 이전에 썼던 명령어를 예측해서 code assist 해주는 플러그인 이다.   
 필수적인 플러그인은 아닌 것 같지만, vscode 에도 있길래 설치해봤다.
 
+### Kite
+Tabnine 과 비슷한 플러그인으로 강력한 AI를 기반으로 자동완성으로 매우아주굉장히 효율적으로 어시스트 해주는 플러그인이다. 다양한 언어를 지원하고 있으며 각 개발툴에 맞게 플러그인을 설치해서 사용할 수 있다.
+
 ### Doxygen Documentation Generator
 주석 자동 생성기로 함수명 위에서 `/**` 엔터 치면 자동으로 생성 해준다.   
 아직 사용은 안해봤지만, webstorm 에서처럼 vscode 가 주석이 이쁘게 생기는게 아니라면 상당히 도움이 되는 플러그인이 될 것 같다!!
@@ -107,6 +138,24 @@ hot reload 지원(저장하면 자동반영)
 ### Auto Import
 자동 임포트(딱봐도 편함)
 
+### Settings Sync
+모든 셋팅을 자동으로 동기화해주는 유용한 익스텐션이며, 내가 설정한 셋팅들을 github 계정에 저장할 수 있다.
+
+### Import const
+라이브러리를 가져올때 해당 라이브러리의 용량을 직관적으로 알 수 있다.
+
+### Multiple cursor case preserve
+다중 선택 커서를 통한 편집 시 대소문자를 기억해서 보다 효율적으로 편집할 수 있도록 도와주는 익스텐션이다.
+
+### CodeSnap
+블로그 등에 소스코드를 복붙할 때 보다 이쁘게 캡쳐해주는 익스텐션.   
+캡처를 원하는 파일을 오픈한 뒤 커맨드 팔렛을 이용해서 codesnap을 실행하면 우측 분할화면으로 캡처할 수 있는 창이 표출됨. (소스 코드를 선택한 뒤 마우스 우클릭 컨텍스트 메뉴에 있는 codesnap 을 실행해서 캡처를 실행할 수도 있음.)
+
+### TODO Highlight
+TODO 주석의 색상을 다르게 표출해주는 익스텐션
+
+
+---
 ## 기타 설정
 
 ### oh-my-zsh를 사용할 때 터미널 글꼴이 깨진다면
@@ -144,3 +193,7 @@ Webstorm 의 자동저장이 너무나 적응되어버렸다면 vscode 도 자�
         "postcss": "css"
     },
     ```
+
+---
+## 신규 꿀 기능
+* sticky scroll : vscode 설정 창에서 sticky 로 검색 후 `Editor > Sticky Scroll: Enabled` 체크! (편집기에서 스크롤하더라도 내가 보고 있는 코드의 함수 선언부(이름, 매개변수)가 맨 윗줄에 보여진다.)
