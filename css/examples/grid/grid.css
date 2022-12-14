@@ -1,0 +1,30 @@
+.container {
+  display: grid;
+  padding: 10px;
+  /* repeat를 통해 픽셀단위는 반응형 웹에서는 잘 사용하지 않음 */
+  /* grid-template-columns: repeat(5, 100px); */ 
+  /* grid-template-columns: repeat(5, 20%); */
+  /* 비율 지정 */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: 100px 200px repeat(2, 100px); */
+  /* minmax를 통해 최소사이즈 지정 */
+  grid-auto-rows: minmax(150px, auto);
+  /* grid-column-gap: 10px; */
+  /* grid-row-gap: 10px; */
+  grid-gap: 10px;
+}
+
+.item2 {
+  /* grid-column-start: 2; */
+  /* grid-column-end: 4; */
+  /* 2번째부터 4번째까지 */
+  /* grid-column: 2 / 4;  */
+  /* 2번째 붙터 끝까지 */
+  /* grid-column: 2 / -1;  */
+  /* 2번째부터 2개 카운트 */
+  grid-column: 2 / span 2; 
+  /* grid-row-start: 1; */
+  /* grid-row-end: 3; */
+  grid-row: 1 / 3
+}
