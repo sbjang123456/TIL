@@ -35,22 +35,28 @@ Microsoft 의 **Visual Studio Code** 는 MIT 라이센스로 오픈소스 이다
 
 기본적으로 처음 시작할 때 설치 플러그인들이다.
 
-* ESLint
-* Prettier - Code formatter
-* Git Graph
-* Git History
-* GitLens
-* Tabnine
-* Doxygen Documentation Generator
-* Material Theme
-* Material Icon Theme
-* Indent Rainbow
-* auto rename tag
-* css peek
-* HTML CSS Support
-* Live Server
-* Reactjs code snippets
-* Auto Import
+* [ESLint](#eslint)
+* [Prettier - Code formatter](#prettier---code-formatter)
+* [Git Graph](#git-graph)
+* [Git History](#git-history)
+* [GitLens](#gitlens)
+* [Tabnine](#tabnine)
+* [Kite](#kite)
+* [Doxygen Documentation Generator](#doxygen-documentation-generator)
+* [Material Theme](#material-theme)
+* [Material Icon Theme](#material-icon-theme)
+* [Indent Rainbow](#indent-rainbow)
+* [auto rename tag](#auto-rename-tag)
+* [css peek](#css-peek)
+* [HTML CSS Support](#html-css-support)
+* [Live Server](#live-server)
+* [Reactjs code snippets](#reactjs-code-snippets)
+* [Auto Import](#auto-import)
+* [Settings Sync](#settings-sync)
+* [Import const](#import-const)
+* [Multiple cursor case preserve](#multiple-cursor-case-preserve)
+* [CodeSnap](#codesnap)
+* [TODO Highlight](#todo-highlight)
 
 ### ESLint
 
