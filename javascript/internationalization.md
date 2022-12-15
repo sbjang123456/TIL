@@ -87,7 +87,35 @@ formatter3.format(-2, 'day'); // 그저께
 formatter3.format(1, 'hour'); // 1시간 후
 formatter3.format(1, 'second'); // 1초 후
 
-const date = new Date();
+const today = new Date();
+const startDt = new Date(2018, 3, 20);
+const diffTime = Math.ceil((startDt - today) / (1000 * 60 * 60 * 24));
+formatter3.format(diffTime, 'day'); // 1,700일 전
+```
+>  * [timeago.js](https://github.com/hustcc/timeago.js/blob/master/README.md)
+>    - 상대적인 시간차이를 계산해주는 오픈소스 라이브러리
+>    - i18n 지원
+>    - 상대적인 시간이 얼마나 오래되었냐에 따라 다르게 표시됨.
 
+
+### 4) 날짜/시간 포맷팅
+```js
+const date = new Date(2018, 3, 20);
+new Intl.DateTimeFormat('en-US').format(date); // 4/20/2018
+new Intl.DateTimeFormat('ko').format(date); // 2018. 4. 20.
+date.toLocaleDateString('ko'); // 2018. 4. 20.
+date.toLocaleDateString('ko', {
+  dateStyle: 'full',
+  timeStyle: 'long',
+}); // 2018년 4월 20일 금요일 오전 12시 0분 0초 GMT+9
+
+date.toLocaleDateString('ko', {
+  minute: 'numeric',
+  hour: 'numeric',
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric',
+  weekday: 'short',
+}); // 2018. 4. 20. (금) 오전 12:00
 ```
 
