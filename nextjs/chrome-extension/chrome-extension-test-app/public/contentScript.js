@@ -4,11 +4,28 @@ document.head.appendChild(script);
 
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    console.log('request ::: ', request, sendResponse());
     if (request.source === 'my-chrome-extension') {
       window.postMessage(
         {
           source: 'my-chrome-extension',
           data: request.data,
+        },
+        '*'
+      );
+    } else if (request.source === 'my-nextjs-app') {
+      window.postMessage(
+        {
+          source: 'my-nextjs-app',
+          data: `custom ::::: ${request.data}`,
+        },
+        '*'
+      );
+    } else if (request.source === 'post-app') {
+      window.postMessage(
+        {
+          source: 'post-app',
+          data: `custom ::::: ${request.data}`,
         },
         '*'
       );
@@ -50,3 +67,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 //       data: event.detail,
 //     });
 //   });
+
+// Content Script
+// chrome.tabs.sendMessage({
+//   message: 'Hello from Content Script!'
+// }, function(response) {
+//   console.log('Received response from Service Worker:', response);
+// });
