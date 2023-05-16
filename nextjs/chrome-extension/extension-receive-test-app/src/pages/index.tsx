@@ -9,11 +9,19 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [message, setMessage] = useState('');
   const [postMessage, setPostMessage] = useState('');
+  const [customMessage, setCustomMessage] = useState('');
 
   const sendMessageToExtension = () => {
     window.postMessage(
       {
         source: 'my-nextjs-app',
+        data: postMessage,
+      },
+      '*'
+    );
+    window.postMessage(
+      {
+        source: 'test-app',
         data: postMessage,
       },
       '*'
@@ -26,10 +34,18 @@ export default function Home() {
 
   
   useEffect(() => {
-    const handleMessage = (event:any) => {
+    const handleMessage = (event:any, b, c, d) => {
+      console.log(event,b,c,d);
       if (event.source !== window) return;
       if (event.data.source && event.data.source === 'my-chrome-extension') {
         setMessage(event.data.data);
+      } else if (event.data.source && event.data.source === 'my-nextjs-app') {
+        console.log('native', event.data.data);
+      } else if (event.data.source && event.data.source === 'post-app') {
+        console.log('post', event.data.data);
+        setCustomMessage(event.data.data);
+      } else if (event.data.source && event.data.source === 'test-app') {
+        console.log('test', event.data.data);
       }
     };
 
@@ -85,6 +101,9 @@ export default function Home() {
             <button onClick={sendMessageToExtension}>
               Send Message to Chrome Extension
             </button>
+          </div>
+          <div>
+            {customMessage}
           </div>
         </div>
         <div className={styles.center}>
