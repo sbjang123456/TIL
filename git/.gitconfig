@@ -2,7 +2,7 @@
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 	hist = log --graph --all --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(white)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --date=short
 
-  fp = fetch --prune
+  	fp = fetch --prune
 	b = branch
 	bd = branch -d
 	cb = "! f() { git checkout -b $1; }; f"
@@ -11,6 +11,7 @@
 		git diff $(git status-select) "
 	s = status
 	pl = pull
+	plr = pull --rebase
 	rs = restore
 	rb = rebase
 	rbc = rebase --continue
