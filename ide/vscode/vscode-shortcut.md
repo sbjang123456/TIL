@@ -1,0 +1,26 @@
+# VSCode 단축키
+
+- 개발툴 단축키
+  - **Command Palette** (<kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>) : Visual Studio Code에 실행가능한 모든 명령어를 마우스없이 키보드로 실행할 수 있는 명령어(검색으로 인해 명령이 실행 및 단축키를 확인할 수 있다.)
+  - **Quick Open** (<kbd>Command</kbd> + <kbd>P</kbd>) : 파일을 빠르게 검색하고 이동해서 오픈할 수 있는 기능.
+  - **User Settings** (<kbd>Command</kbd> + <kbd>,</kbd>) : 개발환경의 설정창. settings.json 을 오픈할 수 있음.
+  - **Toggle Sidebar** (<kbd>Command</kbd> + <kbd>B</kbd>) : 좌측 익스플로러 창을 열고 닫을 수 있는 단축키
+  - **Toggle Terminal** (<kbd>Control</kbd> + <kbd>`</kbd>) : 하단 터미널 창을 열고 닫을 수 있는 단축키
+  - **Keyboard Shortcuts** (<kbd>Command</kbd> + <kbd>K</kbd> + <kbd>S</kbd>) : VSCode의 단축키를 확인할 수 있는 창을 오픈
+    - [맥용 단축키 모음](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+    - [윈도우용 단축키 모음](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+- 편집 단축키(코딩용)
+  - **파일 시작/끝으로 이동** (<kbd>Command</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd>) : 파일의 가장 위와 아래로 이동
+  - **라인 시작/끝으로 이동** (<kbd>Command</kbd> + <kbd>←</kbd> / <kbd>→</kbd>) : 라인의 시작 및 끝으로 이동
+  - **단어 이동(Move Word)** (<kbd>Option</kbd> + <kbd>←</kbd> / <kbd>→</kbd>) : 단어별로 이동
+  - **단어 선택(Select Word)** (<kbd>Option</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd> / <kbd>→</kbd>) : 단어별로 선택
+  - **라인 복사(Copy Line)** (<kbd>Command</kbd> + <kbd>C</kbd>) : 원하는 라인에서 해당 단축키를 통해 라인 복사
+  - **라인 잘라내기(Cut Line)** (<kbd>Command</kbd> + <kbd>X</kbd>) : 원하는 라인에서 해당 단축키를 통해 라인 잘라내기
+  - **라인 위/아래로 이동** (<kbd>Option</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd>) : 원하는 라인에서 해당 단축키를 통해 라인 원하는 위치로 이동 (_선택한 블럭 또한 해당 단축키를 통해 사용 가능_)
+  - **라인 위/아래로 복사** (<kbd>Option</kbd> + <kbd>Shift</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd>) : 원하는 라인에서 해당 단축키를 통해 해당 라인을 복사 후 위 또는 아래로 붙여넣기 할 수 있다.(_선택한 블럭 또한 해당 단축키를 통해 사용 가능_)
+  - **아래로 라인 삽입(Insert line below)** (<kbd>Command</kbd> + <kbd>Enter</kbd>) : 라인에서 아무 위치에서나 해당 단축키를 통해 아래에 라인을 새로 추가할 수 있음!
+  - **다중 선택(Multi Selection)** (<kbd>Command</kbd> + <kbd>D</kbd>) : 한 파일안에서 여러 번 반복되어져서 사용되는 단어가 있다면 해당하는 단어 위에서 해당 단축키를 사용하면 자동으로 모든 반복된 단어들이 자동으로 선택되어져 있기 때문에 동시에 수정할 수 있다.
+  - **마지막 커서 실행취소(Undo last Cursor)** (<kbd>Command</kbd> + <kbd>U</kbd>) : 이 전에 있었던 커서로 이동함
+  - **커서 삽입(insert cursor)** (<kbd>Option</kbd> + <kbd>mouse click</kbd>) : 다중 커서 삽입으로 일괄 편집을 하기 위한 기능
+  - **다중 커서 삽입(Column selection)** (<kbd>Shift</kbd> + <kbd>Option</kbd> + <kbd>drag mouse</kbd>)
+  - **선택 박스 커서 삽입(Current selection)** (<kbd>Shift</kbd> + <kbd>Option</kbd> + <kbd>I</kbd>) : 선택한 블록의 각 라인 끝 부분에 커서가 삽입됨.
