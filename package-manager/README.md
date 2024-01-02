@@ -54,6 +54,7 @@
   - 이를 통해서 **설치 시간을 최소화**하고 설치하지 않아도 사용 가능한 개념(**_Zero Install_**)을 선보입니다.
 - 엄격한 의존 관계로 인해 팬텀 디펜던시와 같은 문제가 발생하지 않는다.
 - 워크스페이스 기능은 계속 존재
+- [yarn berry 설명](./yarn-berry/simple-description.md)
 
 #### yarn berry workspaces
 
