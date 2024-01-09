@@ -38,3 +38,6 @@
 • @babel/preset-react 리액트 사용을 위해 jsx 등을 처리해주는 프리셋 입니다.
 • @babel/preset-typescript 타입스크립트 문법을 변환해주는 프리셋 입니다. 변환시 타입 에러를 잡을 수 없는 단점이 있습니다. 자세한 내용은 https://www.typescriptlang.org/docs/
 handbook/babel-with-typescript.html 여기를 참고해주세요.
+
+> [Babel 공식 사이트 링크](https://babeljs.io/)  
+> [Babel Github 링크](https://github.com/babel/babel)
