@@ -141,6 +141,15 @@
 
 ## MFA 통합 방법
 
+- [Server-side template composition](#server-side-template-composition)
+- [Build-time integration](#build-time-integration)
+- [Run-time integration via Ajax](#run-time-integration-via-ajax)
+- [Run-time integration via `<iframes />`](#run-time-integration-via-iframes)
+- [Run-time integration via Web Components](#run-time-integration-via-web-components)
+- [Run-time integration via JavaScript](#run-time-integration-via-javascript)
+- [Run-time integration via Module Federation](#run-time-integration-via-module-federation)
+- [Linked SPA & Unified SPA](#linked-spa--unified-spa)
+
 ### Server-side template composition
 
 각각 다른 앱에 맞는 HTML을 서빙하는 서버를 뒤에 두고, 요청한 URL에 따라 맞는 HTML들을 라우팅해주는 웹서버(ex: nginx 서버)를 그 앞에다가 놓아서, 맞는 HTML을 응답으로 보내주는 구조
@@ -148,6 +157,10 @@
 ### Build-time integration
 
 분리된 UI를 패키징해 배포하고 빌드타임에 통합시키는 방법
+
+### [Run-time integration via Ajax](./integration/run-time-integration-ajax.md)
+
+ajax를 이용한 템플릿 통합 방식
 
 ### Run-time integration via iframes
 
