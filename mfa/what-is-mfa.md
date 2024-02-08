@@ -154,13 +154,17 @@
 
 각각 다른 앱에 맞는 HTML을 서빙하는 서버를 뒤에 두고, 요청한 URL에 따라 맞는 HTML들을 라우팅해주는 웹서버(ex: nginx 서버)를 그 앞에다가 놓아서, 맞는 HTML을 응답으로 보내주는 구조
 
+- [서버에서 proxy 를 이용한 여러 페이지 통합](./integration/run-time-integration-nginx-proxy.md)
+
 ### Build-time integration
 
 분리된 UI를 패키징해 배포하고 빌드타임에 통합시키는 방법
 
-### [Run-time integration via Ajax](./integration/run-time-integration-ajax.md)
+### Run-time integration via Ajax
 
 ajax를 이용한 템플릿 통합 방식
+
+- [런타임 ajax 통합](./integration/run-time-integration-ajax.md)
 
 ### Run-time integration via iframes
 
