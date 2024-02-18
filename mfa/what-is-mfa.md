@@ -155,6 +155,7 @@
 각각 다른 앱에 맞는 HTML을 서빙하는 서버를 뒤에 두고, 요청한 URL에 따라 맞는 HTML들을 라우팅해주는 웹서버(ex: nginx 서버)를 그 앞에다가 놓아서, 맞는 HTML을 응답으로 보내주는 구조
 
 - [서버에서 proxy 를 이용한 여러 페이지 통합](./integration/run-time-integration-nginx-proxy.md)
+- [서버에서 SSI 를 이용한 프레그먼트 통합](./integration/run-time-integration-nginx-ssl.md)
 
 ### Build-time integration
 
