@@ -213,6 +213,8 @@ web 스펙인 web-components를 이용한 런타임 통합 방식
 
 요즘 이게 좋다던데.
 
+- [Module Federation](./module-federation/README.md)
+
 ### Linked SPA & Unified SPA
 
 각 앱간의 연결방식에 따른 spa. 앱 내부에서 뿐만 아니고 앱 간 링크도 soft로 되어있다면 상당히 높은 사용자경험을 제공할 수 있고, 상태값도 서로 공유할 수 있다.
