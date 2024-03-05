@@ -37,6 +37,8 @@
 		git bd $(git branch-select)"
 	bdsr = "!# Checkout selected remote branch; \n\
 		git push origin --delete $(git remote-branch-select)"
+	gone = "! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '\$2 == \"[gone]\" {print \$1}' | xargs -r git branch -D"
+	bdsync = "! git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
 [includeIf "gitdir:~/dev/workspace/study/"]
 	path = .gitconfig-personal
