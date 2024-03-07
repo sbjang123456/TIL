@@ -36,6 +36,9 @@
     - Naver Map : `https://map.naver.com/p/search/{query}`
     - Kakao Map : `https://map.kakao.com/?q={query}`
     - Naver : `https://search.naver.com/search.naver?query={query}`
+    - Papago
+      - ten : `https://papago.naver.com/?sk=en&tk=ko&hn=1&st={query}`
+      - tko : `https://papago.naver.com/?sk=ko&tk=en&st={query}`
   - [App Store](https://apps.apple.com/kr/app/alfred/id405843582?mt=12)도 있지만(구형으로 설치되던데??) 그냥 사이트에서 받음..
 
 - [TopNotch](https://topnotch.app/) - (무료) mac 의 거슬리는 노치부분을 트릭으로 숨겨주는 것처럼 보여주게함
