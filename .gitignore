@@ -10,3 +10,6 @@ build/
 
 # TIL project
 **/react-rollup-base2/lib/
+
+# Obsidian
+.obsidian/
