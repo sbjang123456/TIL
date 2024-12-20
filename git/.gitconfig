@@ -37,6 +37,16 @@
 		git bd $(git branch-select)"
 	bdsr = "!# Checkout selected remote branch; \n\
 		git push origin --delete $(git remote-branch-select)"
+	tagd = "!# Delete selected tag; \n\
+		git tag -d $(git tag-select)"
+	tagdr = "!# Delete selected remote tag; \n\
+		git push --delete origin $(git tag-select)"
+	tagdd = "!# Delete selected tag and push; \n\
+		! f() { \n\
+			tag_name=$(git tag-select) && \n\
+			git tag -d ${tag_name} && \n\
+			git push --delete origin ${tag_name}; \n\
+		}; f"
 	gone = "! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '\$2 == \"[gone]\" {print \$1}' | xargs -r git branch -D"
 
 [includeIf "gitdir:~/dev/workspace/study/"]
